@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'pg'
+gem 'thin'
 gem 'figaro'
 gem 'haml'
 
