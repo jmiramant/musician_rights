@@ -8,3 +8,12 @@
 			Donate
 		%li
 			About
+.sign_up
+	.copy
+		Support the movement. Stay Informed.
+	.signup
+		= semantic_form_for @user, remote: true do |f|
+			.email_sub
+				= f.input :email, placeholder: 'your.name@email.com'
+			.email_sub_submit
+				= f.action :submit, label: "Sign Up"

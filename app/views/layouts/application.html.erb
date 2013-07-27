@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MusicianRights</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+	<title>MusicianRights</title>
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
 </head>
 <body>
-<%= render 'layouts/header' %>
-<%= render 'layouts/nav' %>
-<%= yield %>
+	<% if !request.fullpath.include?('/admin') %>
+		<%= render 'layouts/header' %>
+		<%= render 'layouts/nav' %>
+	<% end %>
+	<% flash.each do |name, msg| -%>
+		<%= content_tag :div, msg, class: name %>
+	<% end -%>
+	<%= yield %>
 </body>
 </html>
+
