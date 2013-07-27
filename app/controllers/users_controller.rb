@@ -7,7 +7,8 @@ class UsersController < ApplicationController
 	end
 
 	def panel
-		@event = Event.new
+		@new_event = Event.new
+		@events = Event.all
 	end
 
 end

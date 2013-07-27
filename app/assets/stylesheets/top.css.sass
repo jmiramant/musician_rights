@@ -7,16 +7,16 @@ header
 			width: 200px
 .nav_bar
 	background-color: $yellow
-	height: 45px
+	height: 61px
 	ul
 		margin: 0
 		list-style: none
 		display: -webkit-box
-		padding-top: 9px
+		padding-top: 18px
 		li
 			margin: 0 15px
 			font-weight: 700
-			font-size: 20px
+			font-size: 23px
 		a
 			color: #ffffff
 			text-decoration: none
@@ -27,6 +27,35 @@ header
 .sign_up
 	display: -webkit-box	
 	background-color: $green
-	height: 45px
+	height: 56px
+	padding-top: 12px
 	.email_sub
+		float: right
+		input
+			width: 254px
+			border: none
+			height: 31px
+			font-size: 16px
+			padding-left: 10px
+			border-radius: 3px
+			&:focus
+				outline: 0
 	.email_sub_submit
+		float: right
+		input
+			@include transition (all 0.2s ease-in-out)
+			border: 2px solid #ffffff
+			width: 100px
+			height: 31px
+			background-color: $green
+			color: #ffffff
+			text-transform: uppercase
+			font-size: 14px
+			margin: 0 45px 0 20px
+			&:hover
+				background-color: #fff
+				color: $green
+	.copy
+		float: right
+		color: #fff
+		margin: 4px 13px 0 0
