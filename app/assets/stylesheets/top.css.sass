@@ -1,10 +1,29 @@
 header
 	background-color: #ffffff
 	.container
-		display: -webkit-box	
+		display: -webkit-flex
+		display: flex
 		.logo img
 			margin: 10px 0px 10px 40px
 			width: 200px
+		.flex2
+			text-align: right
+			margin-right: 65px 
+			-webkit-flex: 2
+			flex: 2
+			font-size: 44px
+			.icon-twitter
+				color: #00AAF1
+				@include transition (all 0.2s ease-in-out)
+				&:hover
+					text-shadow: #afafaf 0 0 0.1em 
+			.icon-facebook
+				color: #38559B
+				@include transition (all 0.2s ease-in-out)
+				&:hover
+					text-shadow: #afafaf 0 0 0.1em  
+			a
+				text-decoration: none
 .nav_bar
 	background-color: $yellow
 	height: 61px
