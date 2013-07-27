@@ -5,6 +5,7 @@ MusicianRights::Application.routes.draw do
   get '/admin' => "sessions#new"
   post '/login' => "sessions#create"
   get '/logout' => "sessions#destroy"
+  get '/users/panel' => "users#panel"
   resources :users, only: [:new, :create]
   resources :events, only: [:new, :create]
 end

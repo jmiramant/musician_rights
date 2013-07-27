@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 	def create
 	  session[:password] = params[:password]
 	  flash[:notice] = "Successfully logged in"
-	  redirect_to home_path
+	  redirect_to users_panel_path
 	end
 
 	def destroy
