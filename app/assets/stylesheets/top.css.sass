@@ -1,19 +1,31 @@
-.logo img
-	background-image: image-url('logo_one.png')
+header
+	background-color: #ffffff
+	.container
+		display: -webkit-box	
+		.logo img
+			margin: 10px 0px 10px 40px
+			width: 200px
 .nav_bar
 	background-color: $yellow
 	height: 45px
 	ul
+		margin: 0
 		list-style: none
 		display: -webkit-box
-		color: #ffffff
+		padding-top: 9px
 		li
 			margin: 0 15px
 			font-weight: 700
 			font-size: 20px
+		a
+			color: #ffffff
+			text-decoration: none
+			@include transition (all 0.2s ease-in-out)
+			&:hover
+				color: #F2F2F2
 
 .sign_up
-	display: -webkit-box
+	display: -webkit-box	
 	background-color: $green
 	height: 45px
 	.email_sub

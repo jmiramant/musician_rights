@@ -1,19 +1,25 @@
 .nav_bar
-	%ul
-		%li
-			Home
-		%li
-			Get Involved
-		%li
-			Donate
-		%li
-			About
+	.container
+		%ul
+			%a{"href" => "/"}
+				%li
+					Home
+			%a{"href" => "/"}
+				%li
+					Get Involved
+			%a{"href" => "/"}
+				%li
+					Donate
+			%a{"href" => "/"}
+				%li
+					About
 .sign_up
-	.copy
-		Support the movement. Stay Informed.
-	.signup
-		= semantic_form_for @user, remote: true do |f|
-			.email_sub
-				= f.input :email, placeholder: 'your.name@email.com'
-			.email_sub_submit
-				= f.action :submit, label: "Sign Up"
+	.container
+		.copy
+			Support the movement. Stay Informed.
+		.signup
+			= semantic_form_for @user, remote: true do |f|
+				.email_sub
+					= f.input :email, placeholder: 'your.name@email.com'
+				.email_sub_submit
+					= f.action :submit, label: "Sign Up"

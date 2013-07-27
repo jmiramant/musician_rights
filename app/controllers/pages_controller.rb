@@ -4,6 +4,9 @@ class PagesController < ApplicationController
 		@user = User.new
 	end
 
+	def donate
+	end
+
 	def about
 	end
 
