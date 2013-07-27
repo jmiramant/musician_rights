@@ -7,7 +7,25 @@
 			.box
 				.events
 					.text
-						hello
+						-@events.each do |event|
+							.event
+								.title
+									=event.title
+								-if event.date
+									.date
+										- date = event.date
+										= date.inspect
+										<span class='time'> #{event.time} </span>
+								.details
+									Event Details:
+									.dts
+										=event.details
+								.location
+									=event.location
+								%a{"href" => event.button_url}
+									.join
+										Join Event
+
 		.section_two
 			.banner
 				Follow Us on Twitter
@@ -20,3 +38,5 @@
 			.box
 				.facebook
 					=render 'pages/facebook'
+
+

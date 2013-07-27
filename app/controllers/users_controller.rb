@@ -6,4 +6,8 @@ class UsersController < ApplicationController
 	def create
 	end
 
+	def panel
+		@event = Event.new
+	end
+
 end
