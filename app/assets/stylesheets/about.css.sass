@@ -1,0 +1,42 @@
+.about
+	@include outer-container
+	min-height: 700px
+	h2
+		border-bottom: 1px solid #333333
+		padding-bottom: 5px
+		margin-right: 10px
+	.pic
+		@include span-columns(3)
+		margin: 30px 0 40px 0
+		img
+			width: 200px
+			margin-left: 20px
+		p
+			padding-right: 10px
+			text-align: center
+	.text
+		@include span-columns(9)
+		line-height: 22px
+		padding: 20px
+		margin-top: 10px
+	h1, h2
+		color: $yellow
+	ul
+		text-align: center
+		text-decoration: none
+		a
+			color: $grey
+			border: none
+			li
+				display: inline-block
+				margin-top: 40px
+				@include transition (all 0.2s ease-in-out)
+				i
+					font-size: 50px
+				p
+					font-size: 20px
+					margin: 10px 50px
+			&:hover
+				color: $yellow
+		a:nth-child(3)
+			margin-right: 100px
