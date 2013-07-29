@@ -1,8 +1,7 @@
 .third
-	display: -webkit-flex
-	display: flex
+	@include outer-container
 	width: 100%
-	margin: 30px 0
+	margin: 90px 0 30px 0
 	.box
 		border: 1px solid #ffffff
 		width: 350px
@@ -19,7 +18,7 @@
 		margin: -14px 0 -8px -11px
 		float: left
 	.section_one
-		width: 33%
+		@include span-columns(4)
 		.box
 			height: 615px
 		.events
@@ -56,10 +55,7 @@
 						text-align: center
 						padding: 10px
 	.section_two
-		-webkit-flex: none
-		flex: none
-		width: 33%
-		min-width: 100px
+		@include span-columns(4)
 		.twitter
 			margin: 0 auto
 			width: 325px
@@ -67,13 +63,12 @@
 				border: 1px solid #aaaaaa
 				margin: 19px 0
 	.section_three
-		-webkit-flex: 1
-		flex: 1
-		width: 33%
-		min-width: 100px
+		@include span-columns(4)
 		.facebook
 			margin: 0 auto
 			width: 325px
 			iframe
 				border-radius: 3px
 				margin: 20px 0
+.new_user
+	display: none

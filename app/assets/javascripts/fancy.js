@@ -1,13 +1,18 @@
 $(document).ready(function() {
-	$(".various").fancybox({
-		maxWidth	: 800,
-		maxHeight	: 600,
-		fitToView	: false,
-		width		: '70%',
-		height		: '70%',
-		autoSize	: false,
-		closeClick	: false,
-		openEffect	: 'none',
-		closeEffect	: 'none'
+	$("a.openform").click(function() {
+		$.fancybox(
+			$('.new_user').html(), {
+				'width': 950,
+				'height': 1100,
+				'autoScale': false,
+				'hideOnContentClick': false
+			},
+			'onComplete' : function() {
+				$('#new_user form').on('submit', function() {
+					console.log('ummsm');
+					$.fancybox.close
+				});
+			}
+		);
 	});
 });

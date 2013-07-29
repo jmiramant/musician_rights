@@ -5,7 +5,40 @@
 	.first
 		.screen
 		.overlay
+		.content
+			.head
+				%h1
+					Our Mission
+				.mission
+					It is common knowledge musicians make substantially less money as compared to the businesses that profit from their music. When musicians first start out, they have very little bargaining power. They are the targets of bad contracts, which sometimes follow them their whole careers. We want Musicians to receive their fair share of the profits from their music.
+			.g_head
+				%h1
+					Our Goals
+				.goals
+					%ul.tabs
+						%li
+							%a{:href => "#tab1"} Educate
+						%li
+							%a{:href => "#tab2"} Empower
+						%li
+							%a{:href => "#tab3"} Act
+					#tab1
+						%p Educate Musicians. ~~~Expand on how and why this is important. Do we want to list the other tatic goals here~~~
+					#tab2
+						%p Once membership hits critical mass, we will put pressure on Key Music Industry players abusing musicians. The Goal is to let those Musicians out of their contract or re-negotiate them.
+					#tab3
+						%p As Congress gets closer to re-writing the Copyright Act, we will be a voice in any debate on Copyright law.
 	.second
+		.memo_one
+			.memo
+				.banner
+					Musician Rights Memo
+			.memo_box
+		.memo_two
+			.memo
+				.banner
+					Statement of Support
+			.memo_box
 	.third
 		.section_one
 			.banner
@@ -44,5 +77,9 @@
 			.box
 				.facebook
 					=render 'pages/facebook'
+.new_user
+	= semantic_form_for @user, remote: true do |f|
+		= f.inputs
+		= f.action :submit, label: "Sign Up"
 
 
