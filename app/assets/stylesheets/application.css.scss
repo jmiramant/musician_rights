@@ -1,5 +1,6 @@
 /*
  *= require_self
+ *= require fancybox
  */
 
 @import 'bourbon';
@@ -9,3 +10,6 @@
 @import 'global';
 @import 'top';
 @import 'home';
+@import 'home_one';
+@import 'bottom';
+@import 'donate';

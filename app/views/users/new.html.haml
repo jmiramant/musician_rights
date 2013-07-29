@@ -1,0 +1,6 @@
+.signup
+	= semantic_form_for @user, remote: true do |f|
+		.email_sub_submit 
+			= f.action :submit, label: "Sign Up"
+		.email_sub
+			= f.input :email, label: false , placeholder: 'your.name@email.com'

@@ -1,10 +1,11 @@
 header
-	background-color: #ffffff
+	background-color: $yellow
+	height: 98px
 	.container
 		display: -webkit-flex
 		display: flex
 		.logo img
-			margin: 10px 0px 10px 40px
+			margin: 4px 0px 10px 40px
 			width: 200px
 		.flex2
 			text-align: right
@@ -12,21 +13,30 @@ header
 			-webkit-flex: 2
 			flex: 2
 			font-size: 44px
+			.text
+				font-size: 13px
+				line-height: 13px
+				text-align: left
+				color: whitesmoke
+				border-bottom: 1px solid whitesmoke
+				width: 115px
+				margin: 12px 0 0 240px
 			.icon-twitter
 				color: #00AAF1
 				@include transition (all 0.2s ease-in-out)
 				&:hover
-					text-shadow: #afafaf 0 0 0.1em 
+					text-shadow: #eeeeee 0 0 0.1em 
 			.icon-facebook
 				color: #38559B
 				@include transition (all 0.2s ease-in-out)
 				&:hover
-					text-shadow: #afafaf 0 0 0.1em  
+					text-shadow: #eeeeee 0 0 0.1em  
 			a
 				text-decoration: none
 .nav_bar
-	background-color: $yellow
 	height: 61px
+	width: 533px
+	margin: 41px 0 0 -15px
 	ul
 		margin: 0
 		list-style: none
@@ -36,6 +46,7 @@ header
 			margin: 0 15px
 			font-weight: 700
 			font-size: 23px
+			display: inline-block
 		a
 			color: #ffffff
 			text-decoration: none
@@ -56,7 +67,7 @@ header
 			height: 31px
 			font-size: 16px
 			padding-left: 10px
-			border-radius: 3px
+			border-radius: 2px
 			&:focus
 				outline: 0
 	.email_sub_submit
