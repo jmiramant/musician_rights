@@ -53,39 +53,27 @@ header
 			text-decoration: none
 			@include transition (all 0.2s ease-in-out)
 			&:hover
-				color: #F2F2F2
+				color: $grey
 
 .sign_up
 	display: -webkit-box	
 	background-color: $green
 	height: 56px
 	padding-top: 12px
-	.email_sub
+	.join
 		float: right
-		input
-			width: 254px
-			border: none
-			height: 31px
-			font-size: 16px
-			padding-left: 10px
-			border-radius: 2px
-			&:focus
-				outline: 0
-	.email_sub_submit
-		float: right
-		input
-			@include transition (all 0.2s ease-in-out)
-			border: 2px solid #ffffff
-			width: 100px
-			height: 31px
-			background-color: $green
-			color: #ffffff
-			text-transform: uppercase
-			font-size: 14px
-			margin: 0 45px 0 20px
-			&:hover
-				background-color: #fff
-				color: $green
+		@include transition (all 0.2s ease-in-out)
+		border: 2px solid #ffffff
+		width: 100px
+		height: 31px
+		background-color: $green
+		color: #ffffff
+		text-transform: uppercase
+		font-size: 14px
+		margin: 0 45px 0 20px
+		&:hover
+			background-color: #fff
+			color: $green
 	.copy
 		float: right
 		color: #fff

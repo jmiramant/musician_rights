@@ -1,12 +1,13 @@
 - if admin?
-	.create_event
-		= semantic_form_for @new_event, url: 'event/create', remote: true do |f|
-			= f.inputs
-			= f.actions :submit
-	.current_events
-		- @events.each do |event|
-			= event.title
-			%br
+	.admin
+		.create_event
+			= semantic_form_for @new_event, url: 'event/create', remote: true do |f|
+				= f.inputs
+				= f.actions :submit
+		.current_events
+			- @events.each do |event|
+				= event.title
+				%br
 - else
 	%div
 		Sorry but you have to be an admin to veiw this page. If you have admin rights, 

@@ -1,0 +1,20 @@
+= render 'layouts/header'
+.third
+	.section_one
+		.banner
+			Members
+		.box
+			.events
+				.text
+					-@users.each do |user|
+						.event
+							.title
+								=user.first_name
+								=user.last_name
+							.band
+								=user.band
+	.signup
+		= semantic_form_for @new_user do |f|
+			= f.inputs
+			= f.action :submit, label: "Sign Up"
+	=@count

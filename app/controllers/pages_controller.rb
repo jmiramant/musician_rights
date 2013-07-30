@@ -11,4 +11,10 @@ class PagesController < ApplicationController
 	def about
 	end
 
+	def members
+		@users = User.where(opt_out: 'false')
+		@new_user = User.new
+		@count = User.all.length
+	end
+
 end
