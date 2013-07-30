@@ -1,13 +1,11 @@
 %header
 	.container
-		.logo
-			=image_tag "logo_one.png"
+		%a{"href" => "/"}
+			.logo
+				=image_tag "logo_one.png"
 		.nav_bar
 			.container
 				%ul
-					%a{"href" => "/"}
-						%li
-							Home
 					%a{"href" => "/users/new"}
 						%li
 							Members

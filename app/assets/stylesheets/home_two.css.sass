@@ -4,8 +4,14 @@
 	margin-top: 80px
 	.memo_one
 		@include span-columns(6)
+		a
+			text-decoration: none
+			color: $grey
 	.memo_two
 		@include span-columns(6)
+		a
+			text-decoration: none
+			color: $grey
 	.memo
 		margin: 10px
 	.banner
@@ -23,11 +29,11 @@
 		background-color: #ffffff
 		height: 200px
 		margin: 0 auto
+		@include transition (all 0.2s ease-in-out)
 		text-align: center
 		&:hover	
 			color: $yellow
 		p
 			font-size: 27px
 		i
-			@include transition (all 0.2s ease-in-out)
 			font-size: 80px

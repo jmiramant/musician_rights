@@ -15,15 +15,20 @@
 			padding-right: 10px
 			text-align: center
 	.text
-		@include span-columns(9)
+		@include span-columns(7)
 		line-height: 22px
 		padding: 20px
-		margin-top: 55px
+		margin-top: -10px
+		.video
+			margin: 0 auto
 	h1, h2
 		color: $yellow
 	ul
+		@include span-columns(2)
 		text-align: center
 		text-decoration: none
+		margin-left: -40px
+		padding: 0
 		a
 			color: $grey
 			border: none
