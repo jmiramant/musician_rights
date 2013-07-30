@@ -21,5 +21,13 @@
 	.memo_box
 		width: 360px
 		background-color: #ffffff
-		height: 251px
+		height: 200px
 		margin: 0 auto
+		text-align: center
+		&:hover	
+			color: $yellow
+		p
+			font-size: 27px
+		i
+			@include transition (all 0.2s ease-in-out)
+			font-size: 80px
