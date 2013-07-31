@@ -1,33 +1,56 @@
 $(document).ready(function() {
+	$('.memo .button').on('click', function() {
+		$('.memo').fadeOut();
+		setTimeout(function() {
+			$('.text .mem_event:nth-child(1)').fadeIn();
+			successMessage();
+		}, 1000);
+	});
 
 	$('.signup form').on("ajax:success", function(e, data) {
-		console.log(data);
-		successPath(data);
+		if (data.opt_out === false){
+			successPath(data);
+		}
+		$('.memo').fadeIn();
+		$(this).closest('form').find("input[type=text], textarea").val("");
+		$(this).closest('form').find("input[type=number], textarea").val("");
+		$(this).closest('form').find("input[type=email], textarea").val("");
 	});
 
 	$('.signup form').on("ajax:error", function(e, data) {
-		console.log($.parseJSON(data.responseText).error);
 		errorHandling(e, data);
 	});
 });
 
 function successPath(data) {
-	$('.text .mem_event:first-child').before("<div class='mem_event'> <div class='title'>" + data.first_name + " " + data.last_name + "</div> <div class='band'>" + data.band + "</div> </div>");
+	if (data.band !== "") {
+		var band = "Band: ";
+	} else {
+		var band = "";
+	}
+	$('.text .mem_event:first-child').before("<div style='display:none' class='mem_event'> <div class='title'>" + data.id + " - "+ data.first_name + " " + data.last_name + "</div> <div class='band'>"+ band + data.band + "</div> </div>");
+}
+
+function successMessage() {
+	$('.messages').fadeIn();
+	setTimeout(function() {
+		$('.messages').fadeOut();
+	}, 5000);
 }
 
 
 function errorHandling(e, data) {
-	var errors = $.parseJSON(data.responseText).error;
+	var errors = $.parseJSON(data.responseText);
 	var px = 30 * errors.length;
-	$('.signup').animate({
+	$('.errors').animate({
 		height: '+=' + px + 'px'
 	}, 500);
 	for (e in errors) {
-		$('.signup').append('<div style=" font-size: 17px; text-align: center; color: white;">' + errors[e] + '<div>');
+		$('.errors').append('<div style=" font-size: 17px; text-align: center; color: $grey;">' + errors[e] + '<div>');
 	}
 	setTimeout(function() {
-		$('.signup').html('');
-		$('.signup').animate({
+		$('.errors').html('');
+		$('.errors').animate({
 			height: '-=' + px + 'px'
 		}, 500);
 	}, 10000);

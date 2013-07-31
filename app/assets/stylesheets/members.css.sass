@@ -1,9 +1,8 @@
 .signup
   border: 1px solid $yellow
   padding: 20px 40px 20px 20px
-  text-align: center
-  margin: 50px auto
-  border-radius: 10px
+  margin: 0 auto
+  border-radius: 3px
   width: 351px
   text-align: center
   background-color: whitesmoke
@@ -67,13 +66,14 @@
 
 .mem_event
   border-bottom: 1px solid #E8E8E8
-  padding: 10px
+  padding: 7px 10px 4px 10px
+  border-left: 7px solid $yellow
   .title
     padding: 5px 0 5px 10px
-    border-left: 7px solid $yellow
-    border-bottom: 1px solid #afafaf
     font-weight: 700
-    font-size: 20px
+    font-size: 18px
+    padding: 3px 0 3px 18px
+    text-transform: capitalize
   .date
     font-size: 12px
     padding: 5px 0 0 10px
@@ -89,3 +89,58 @@
   .location
     text-align: center
     padding: 10px
+  .band
+    margin-left: 63px
+.messages, .data
+  display: none
+.memo
+  width: 575px
+  border: 1px solid $yellow
+  border-radius: 3px
+  position: absolute
+  top: 20%
+  left: 40%
+  display: none
+  background-color: #ffffff
+  .top
+    background-color: $grey
+    color: $yellow
+    height: 66px
+    margin-top: -23px
+    border-radius: 3px 3px 0 0
+    h1
+      padding-top: 21px
+      text-align: center
+  .body
+    padding: 0px 28px 0px 0
+    margin: 5px 0 0 28px
+    border-left: 1px solid
+    #def
+      text-transform: uppercase
+      border-bottom: 1px solid $yellow
+    h3
+      color: $yellow
+      background-color: $grey
+      border-bottom: 4px solid
+      padding: 3px 0 0 11px
+      height: 30px
+      border-radius: 0 3px 3px 0
+    ul
+      line-height: 24px
+      list-style: none
+  .button
+    position: relative
+    cursor: pointer
+    background-color: $yellow
+    width: 30%
+    height: 45px
+    font-size: 18px
+    margin: 0px 25px 25px 25px
+    float: right
+    padding: 11px 0 0 48px
+    border-radius: 3px
+    border: 1px solid #374953
+    @include transition (all 0.2s ease-in-out)
+    &:hover
+      background-color: $grey
+      color: $yellow

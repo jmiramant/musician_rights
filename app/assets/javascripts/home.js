@@ -22,4 +22,8 @@ $(document).ready(function() {
 			e.preventDefault();
 		});
 	});
+
+	$('.join').on('click', function(){
+		window.location.href = "/members";
+	});
 });

@@ -27,7 +27,7 @@ group :test, :development do
 end
 
 gem 'jquery-rails'
-gem 'fancybox2-rails', '~> 0.2.4'
 gem 'jquery-ui-rails'
 gem 'formtastic'
 gem 'font-awesome-rails'
+gem 'fastercsv'

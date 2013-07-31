@@ -21,4 +21,14 @@ class UsersController < ApplicationController
 		@events = Event.all
 	end
 
+	def export_csv
+		@users = User.all
+    user_csv = CSV.generate do |csv|
+      csv << ["First Name", "Last Name", "Zipcode", "Band", "Email", "Opt Out"]
+      @users.each do |user|
+        csv << [user.first_name, user.last_name, user.zipcode, user.band, user.email, user.opt_out]
+      end
+		end
+		send_data(user_csv, :type => 'test/csv', :filename => 'user_record.csv') 
+	end
 end

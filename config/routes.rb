@@ -8,6 +8,7 @@ MusicianRights::Application.routes.draw do
   post '/login' => "sessions#create"
   get '/logout' => "sessions#destroy"
   get '/users/panel' => "users#panel"
+  match 'csv' => 'users#export_csv', :as => :csv
   resources :users, only: [:new, :create]
   resources :events, only: [:new, :create, :destroy]
 end

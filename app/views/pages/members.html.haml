@@ -9,12 +9,25 @@
 					-@users.each do |user|
 						.mem_event
 							.title
+								=user.id
+								\-
 								=user.first_name
 								=user.last_name
 							.band
-								=user.band
+								- if user.band != ""
+									Band: 
+									=user.band
 	.signup
+		.errors
+		.messages
+			Thank you for signing up!
 		= semantic_form_for @new_user, url: users_path, remote: true do |f|
-			= f.inputs
-			= f.action :submit, label: "Sign Up"
-	=@count
+			= f.input :first_name
+			= f.input :last_name
+			= f.input :email
+			= f.input :zipcode, as: :string
+			= f.input :band
+			= f.input :opt_out, label: "Exclude your name from being posted on our website"
+			= f.action :submit, label: "Next"
+
+=render 'pages/memo'

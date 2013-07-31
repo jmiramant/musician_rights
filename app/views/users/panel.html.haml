@@ -10,6 +10,7 @@
 				= event.title
 				= link_to 'Delete', event_path(event), :confirm => 'Are you sure?', :method => :delete
 				%br
+			= link_to 'Download All Users', csv_path
 - else
 	.sorry
 		Sorry but you have to be an admin to veiw this page. 
