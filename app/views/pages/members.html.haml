@@ -1,8 +1,18 @@
 = render 'layouts/header'
+.top_copy
+	.spacing
+		.text
+			%h1
+				We stand for our members
+			%p
+				It is common knowledge musicians make substantially less money as compared to the businesses that profit from their music. When musicians first start out, they have very little bargaining power. They are the targets of bad contracts, which sometimes follow them their whole careers. We want Musicians to receive their fair share of the profits from their music.
+		.counter
+			.count_bx
+				.copy
+					Total Members
+				.count
+					=@count
 .third
-	.top_copy
-		It is common knowledge musicians make substantially less money as compared to the businesses that profit from their music.When musicians first start out, they have very little bargaining power. They are the targets of bad contracts, which sometimes follow them their whole careers. We want Musicians to receive their fair share of the profits from their music.
-
 	.section_one
 		.banner
 			Members
@@ -20,7 +30,14 @@
 								- if user.band != ""
 									Band: 
 									=user.band
+	.lovers
+	.use_logo
+		.copy
+			%h3
+				Stand Loud
 	.signup
+		.join
+			Join The Movement
 		.errors
 		.messages
 			Thank you for signing up!
@@ -32,5 +49,21 @@
 			= f.input :band
 			= f.input :opt_out, label: "Exclude your name from being posted on our website"
 			= f.action :submit, label: "Next"
+		.perk_box
+			%h2
+				Sweeten The Deal
+			.perk
+				%i.icon-usd
+				10
+				%p 
+					You recognize the need for an aggressive Musician Rights Movement. Your donation to MusicianRights.org, will get you an awesome Logo Sticker!
+			.perk
+				%i.icon-usd
+				50
+				%p 
+					You recognize the need for an aggressive Musician Rights Movement. Your donation to MusicianRights.org, will get you an awesome Logo T-shirt!
+					You recognize the need for an aggressive Musician Rights Movement. Your donation to MusicianRights.org, will get you an awesome Logo Sticker!
 
-=render 'pages/memo'
+				
+
+	=render 'pages/memo'

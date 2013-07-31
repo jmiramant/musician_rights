@@ -1,18 +1,65 @@
-.signup
-  border: 1px solid $yellow
-  padding: 20px 40px 20px 20px
-  margin: 0 auto
-  border-radius: 3px
-  width: 351px
-  text-align: center
-  background-color: whitesmoke
-  display: inline-block
-  input
-    margin-top: 10px
-    width: 100%
-.inputs
-  border: none
-  ol
+.top_copy
+  background-color: $grey
+  min-height: 300px
+  .spacing
+    width: 1088px
+    margin: 0 auto
+    .text
+      width: 717px
+      float: left
+      color: whitesmoke
+      margin: 54px auto
+      height: 200px
+      h1
+        color: $yellow
+        margin-bottom: 34px
+      p
+        font-size: 18px
+        line-height: 26px
+    .counter
+      float: right
+      width: 371px
+      .count_bx
+        width: 200px
+        background-color: #fff
+        text-align: center
+        height: 100px
+        margin: 30px 0 0 95px
+        .copy
+          background-color: $yellow
+          color: $grey
+          font-size: 20px
+          height: 33px
+          padding-top: 5px
+        .count
+          color: $yellow
+          font-weight: 700
+          font-size: 52px
+          padding-top: 20px
+
+.third
+  @include outer-container
+  .signup
+    @include span-columns(4)
+    border: 3px solid $grey
+    padding: 20px 40px 20px 20px
+    margin: -233px auto
+    float: right
+    width: 351px
+    text-align: center
+    background-color: whitesmoke
+    display: inline-block
+    input
+      margin-top: 10px
+      width: 100%
+    .join
+      width: 345px
+      height: 45px
+      margin: -20px 0 0 -20px
+      font-size: 28px
+      padding-top: 11px
+      background-color: $yellow
+  #new_user
     list-style: none
     padding-left: 21px
     li input
@@ -22,128 +69,128 @@
       height: 35px
       padding-left: 10px
       &:focus
-        outline: none
-#user_submit_action input
-  position: relative
-  background-color: $yellow
-  width: 76%
-  height: 45px
-  font-size: 18px
-  margin-left: 26px
-  margin-bottom: 10px
-  border-radius: 5px
-  border: 1px solid #374953
-  @include transition (all 0.2s ease-in-out)
-  &:hover
-    background-color: $grey
-    color: $yellow
-  input[type="checkbox"]
-    background-color: white
-
-#ma-sign-up
-  width: 300px
-  padding: 20px
-  text-align: center
-  background-color: whitesmoke
-  display: inline-block
-  padding-left: 40px
-  vertical-align: top
-
-  input
-    margin-top: 10px
-    width: 100%
-
-  .button
-    background-color: $yellow
-
-#new_user input[type="checkbox"]
-  background-color: black
-
-.label
-  font-size: 15px
-  float: left
-  font-weight: 700
-  margin-bottom: -5px
-  margin-top: 15px
-  margin-left: 5px
-
-.mem_event
-  border-bottom: 1px solid #E8E8E8
-  padding: 7px 10px 4px 10px
-  border-left: 7px solid $yellow
-  .title
-    padding: 5px 0 5px 10px
-    font-weight: 700
-    font-size: 18px
-    padding: 3px 0 3px 18px
-    text-transform: capitalize
-  .date
-    font-size: 12px
-    padding: 5px 0 0 10px
-    .time
-      padding-left: 10px
-  .details
-    padding: 5px 0
-    .dts
-      padding: 10px 0 0 10px
-      color: #333333
-      font-size: 14px
-      width: 303px
-  .location
-    text-align: center
-    padding: 10px
-  .band
-    margin-left: 63px
-.messages, .data
-  display: none
-.memo
-  width: 575px
-  border: 1px solid $yellow
-  border-radius: 3px
-  position: absolute
-  top: 20%
-  left: 40%
-  display: none
-  background-color: #ffffff
-  .top
-    background-color: $grey
-    color: $yellow
-    height: 66px
-    margin-top: -23px
-    border-radius: 3px 3px 0 0
-    h1
-      padding-top: 21px
-      text-align: center
-  .body
-    padding: 0px 28px 0px 0
-    margin: 5px 0 0 28px
-    border-left: 1px solid
-    #def
-      text-transform: uppercase
-      border-bottom: 1px solid $yellow
-    h3
-      color: $yellow
-      background-color: $grey
-      border-bottom: 4px solid
-      padding: 3px 0 0 11px
-      height: 30px
-      border-radius: 0 3px 3px 0
-    ul
-      line-height: 24px
-      list-style: none
-  .button
+        outline: 1px solid $grey
+  #user_submit_action input
     position: relative
-    cursor: pointer
     background-color: $yellow
-    width: 30%
+    width: 76%
     height: 45px
     font-size: 18px
-    margin: 0px 25px 25px 25px
-    float: right
-    padding: 11px 0 0 48px
-    border-radius: 3px
+    margin-left: 26px
+    margin-bottom: 10px
+    border-radius: 5px
     border: 1px solid #374953
     @include transition (all 0.2s ease-in-out)
     &:hover
       background-color: $grey
       color: $yellow
+    input[type="checkbox"]
+      background-color: white
+
+  #ma-sign-up
+    width: 300px
+    padding: 20px
+    text-align: center
+    background-color: whitesmoke
+    display: inline-block
+    padding-left: 40px
+    vertical-align: top
+
+    input
+      margin-top: 10px
+      width: 100%
+
+    .button
+      background-color: $yellow
+
+  #new_user input[type="checkbox"]
+    background-color: black
+
+  .label
+    font-size: 15px
+    float: left
+    margin-bottom: -5px
+    margin-top: 9px
+    margin-left: 5px
+
+  .mem_event
+    border-bottom: 1px solid #E8E8E8
+    padding: 7px 10px 4px 10px
+    border-left: 7px solid $yellow
+    .title
+      padding: 5px 0 5px 10px
+      font-size: 18px
+      padding: 3px 0 3px 18px
+      text-transform: capitalize
+    .date
+      font-size: 12px
+      padding: 5px 0 0 10px
+      .time
+        padding-left: 10px
+    .details
+      padding: 5px 0
+      .dts
+        padding: 10px 0 0 10px
+        color: #333333
+        font-size: 14px
+        width: 303px
+    .location
+      text-align: center
+      padding: 10px
+    .band
+      margin-left: 63px
+  .messages, .data
+    display: none
+  .memo
+    width: 575px
+    border: 7px solid $yellow
+    height: 78%
+    overflow-x: scroll
+    border-radius: 3px
+    position: fixed
+    top: 7%
+    left: 29%
+    display: none
+    background-color: #ffffff
+    .top
+      background-color: $grey
+      color: $yellow
+      height: 66px
+      margin-top: -22px
+      border-radius: 3px 3px 0 0
+      h1
+        padding-top: 21px
+        text-align: center
+    .body
+      padding: 0px 28px 0px 0
+      margin: 5px 0 0 28px
+      border-left: 1px solid
+      #def
+        text-transform: uppercase
+        border-bottom: 1px solid $yellow
+      h3
+        color: $yellow
+        background-color: $grey
+        border-bottom: 4px solid
+        padding: 3px 0 0 11px
+        height: 30px
+        border-radius: 0 3px 3px 0
+      ul
+        line-height: 24px
+        list-style: none
+    .button
+      position: relative
+      cursor: pointer
+      background-color: $yellow
+      width: 30%
+      height: 45px
+      font-size: 18px
+      margin: 0px 25px 25px 25px
+      float: right
+      padding: 11px 0 0 48px
+      border-radius: 3px
+      border: 1px solid #374953
+      @include transition (all 0.2s ease-in-out)
+      &:hover
+        background-color: $grey
+        color: $yellow

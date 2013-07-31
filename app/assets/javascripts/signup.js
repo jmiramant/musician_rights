@@ -3,12 +3,13 @@ $(document).ready(function() {
 		$('.memo').fadeOut();
 		setTimeout(function() {
 			$('.text .mem_event:nth-child(1)').fadeIn();
+			incrementCount();
 			successMessage();
 		}, 1000);
 	});
 
 	$('.signup form').on("ajax:success", function(e, data) {
-		if (data.opt_out === false){
+		if (data.opt_out === false) {
 			successPath(data);
 		}
 		$('.memo').fadeIn();
@@ -28,7 +29,13 @@ function successPath(data) {
 	} else {
 		var band = "";
 	}
-	$('.text .mem_event:first-child').before("<div style='display:none' class='mem_event'> <div class='title'>" + data.id + " - "+ data.first_name + " " + data.last_name + "</div> <div class='band'>"+ band + data.band + "</div> </div>");
+	$('.text .mem_event:first-child').before("<div style='display:none' class='mem_event'> <div class='title'>" + data.id + " - " + data.first_name + " " + data.last_name + "</div> <div class='band'>" + band + data.band + "</div> </div>");
+}
+
+function incrementCount() {
+	var count = parseInt($('.count_bx .count').html());
+	var update = ++count;
+	$('.count_bx .count').html(update);
 }
 
 function successMessage() {
