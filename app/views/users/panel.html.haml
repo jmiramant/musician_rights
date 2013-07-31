@@ -1,3 +1,4 @@
+=render 'layouts/header'
 - if admin?
 	.admin
 		.create_event
@@ -7,9 +8,12 @@
 		.current_events
 			- @events.each do |event|
 				= event.title
+				= link_to 'Delete', event_path(event), :confirm => 'Are you sure?', :method => :delete
 				%br
 - else
-	%div
-		Sorry but you have to be an admin to veiw this page. If you have admin rights, 
+	.sorry
+		Sorry but you have to be an admin to veiw this page. 
+		%br
+		If you have admin rights, 
 		%a{"href" => "/admin"}
 			click here to login.

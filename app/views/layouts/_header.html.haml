@@ -3,6 +3,8 @@
 		%a{"href" => "/"}
 			.logo
 				=image_tag "logo_one.png"
+			- flash.each do |name, msg|
+				= content_tag :div, msg, class: name
 		.nav_bar
 			.container
 				%ul
@@ -15,6 +17,9 @@
 					%a{"href" => "/about"}
 						%li
 							About
+					- if admin?
+						= link_to 'Admin Panel', users_panel_path
+						= link_to 'Logout', logout_path
 		.flex2
 			.text
 				Join The 

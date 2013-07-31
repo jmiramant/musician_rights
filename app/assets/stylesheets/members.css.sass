@@ -1,16 +1,13 @@
 .signup
   border: 1px solid $yellow
-  padding: 20px
+  padding: 20px 40px 20px 20px
   text-align: center
   margin: 50px auto
-  width: 650px
   border-radius: 10px
-  width: 300px
-  padding: 20px
+  width: 351px
   text-align: center
   background-color: whitesmoke
   display: inline-block
-  padding-right: 40px
   input
     margin-top: 10px
     width: 100%
@@ -18,18 +15,31 @@
   border: none
   ol
     list-style: none
+    padding-left: 21px
     li input
+      color: $grey
+      font-size: 16px 
+      border: none
+      height: 35px
+      padding-left: 10px
+      &:focus
+        outline: none
 #user_submit_action input
   position: relative
   background-color: $yellow
-  margin-bottom: 5px
-  width: 100%
+  width: 76%
   height: 45px
-  padding-left: 10px
-  font-size: 15px
+  font-size: 18px
+  margin-left: 26px
   margin-bottom: 10px
   border-radius: 5px
   border: 1px solid #374953
+  @include transition (all 0.2s ease-in-out)
+  &:hover
+    background-color: $grey
+    color: $yellow
+  input[type="checkbox"]
+    background-color: white
 
 #ma-sign-up
   width: 300px
@@ -48,6 +58,34 @@
     background-color: $yellow
 
 .label
-  font-size: 16px
+  font-size: 15px
+  float: left
   font-weight: 700
-  margin-bottom: 10px
+  margin-bottom: -5px
+  margin-top: 15px
+  margin-left: 5px
+
+.mem_event
+  border-bottom: 1px solid #E8E8E8
+  padding: 10px
+  .title
+    padding: 5px 0 5px 10px
+    border-left: 7px solid $yellow
+    border-bottom: 1px solid #afafaf
+    font-weight: 700
+    font-size: 20px
+  .date
+    font-size: 12px
+    padding: 5px 0 0 10px
+    .time
+      padding-left: 10px
+  .details
+    padding: 5px 0
+    .dts
+      padding: 10px 0 0 10px
+      color: #333333
+      font-size: 14px
+      width: 303px
+  .location
+    text-align: center
+    padding: 10px

@@ -5,6 +5,15 @@ class UsersController < ApplicationController
 	end
 
 	def create
+		p params[:user]
+		@user = User.create(params[:user])
+	  respond_to do |format|
+	    if @user.save
+	      format.json { render json: @user }
+	    else
+	      format.json { render json: @user.errors.full_messages, status: :unprocessable_entity }
+	    end
+	  end
 	end
 
 	def panel

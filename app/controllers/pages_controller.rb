@@ -12,7 +12,7 @@ class PagesController < ApplicationController
 	end
 
 	def members
-		@users = User.where(opt_out: 'false')
+		@users = User.where(opt_out: 'false').order('created_at DESC')
 		@new_user = User.new
 		@count = User.all.length
 	end
