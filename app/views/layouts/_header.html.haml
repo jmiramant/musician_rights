@@ -1,7 +1,7 @@
 %header
 	.container
-		%a{"href" => "/"}
-			.logo
+		.logo
+			%a{"href" => "/"}
 				=image_tag "logo_one.png"
 			- flash.each do |name, msg|
 				= content_tag :div, msg, class: name

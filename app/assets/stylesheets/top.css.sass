@@ -2,29 +2,29 @@ header
 	background-color: $yellow
 	height: 98px
 	.container
-		display: -webkit-flex
-		display: flex
-		.logo img
-			margin: 4px 0px 10px 40px
-			width: 200px
+		width: 1160px
+		.logo
+			width: 263px
+			img
+				margin: 4px 0px 10px 40px
+				width: 200px
+				float: left
 		.flex2
 			text-align: right
 			margin-right: 65px 
-			-webkit-flex: 2
-			flex: 2
 			font-size: 44px
+			float: right
 			.text
 				font-size: 13px
 				line-height: 13px
 				text-align: left
 				color: whitesmoke
-				width: 115px
-				margin: 12px 0 0 273px
+				width: 71px
+				margin: 12px 0 0 0
 				padding-bottom: 6px
 			.icon-twitter
 				color: #00AAF1
 				@include transition (all 0.2s ease-in-out)
-				margin-right: -11px
 				&:hover
 					text-shadow: #A8A8A8 0 0 0.1em 
 			.icon-facebook
@@ -37,11 +37,11 @@ header
 .nav_bar
 	height: 61px
 	width: 533px
-	margin: 41px 0 0 -15px
+	float: left
+	margin: 37px 0 0 0 
 	ul
 		margin: 0
 		list-style: none
-		display: -webkit-box
 		padding-top: 18px
 		li
 			margin: 0 15px
@@ -56,7 +56,6 @@ header
 				color: white
 
 .sign_up
-	display: -webkit-box	
 	background-color: $green
 	height: 56px
 	padding-top: 12px
