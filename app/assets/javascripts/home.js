@@ -23,8 +23,18 @@ $(document).ready(function() {
 		});
 	});
 
-	$('.join').on('click', function(){
+	$('.join').on('click', function() {
 		window.location.href = "/members";
 	});
+
+	$('.memo_one .memo_box').on('click', function(e){
+			e.preventDefault();
+		$('.memo').fadeIn();
+	});
+
+	$('.memo .button').on('click', function() {
+		$('.exit_mem').fadeOut();
+	});
+
 
 });

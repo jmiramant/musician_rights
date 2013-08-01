@@ -113,9 +113,4 @@
 			.box
 				.facebook
 					=render 'pages/facebook'
-.new_user
-	= semantic_form_for @user, remote: true do |f|
-		= f.inputs
-		= f.action :submit, label: "Sign Up"
-
-
+		=render 'pages/memo'

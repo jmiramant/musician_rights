@@ -38,7 +38,7 @@
 					width: 59%
 					display: inline-block
 					float: left
-					padding: 4px 0 4px 14px
+					padding: 0px 0 4px 14px
 					margin-top: 10px
 					.sub_header
 						border-bottom: 1px solid $yellow
@@ -47,17 +47,19 @@
 						height: 147px
 						li
 							list-style: none
-							font-size: 17px
+							font-size: 16px
 							line-height: 21px
 							padding-left: 14px
+							padding-top: 5px
 
 				ul:nth-child(2)
 					width: 41%
 					padding: 0
 					li
 						list-style: none
-						font-size: 17px
+						font-size: 16px
 						line-height: 21px
+						padding-top: 18px
 				.member
 					@include transition (all 0.2s ease-in-out)
 					border: 2px solid #353f48
@@ -107,7 +109,8 @@
 						border-top: 2px solid $grey
 						background-color: whitesmoke 
 						&:hover
-							background-color: #ffffff 
+							background-color: $grey 
+							color: $yellow 
 					a
 						text-decoration: none
 						font-size: 20px
