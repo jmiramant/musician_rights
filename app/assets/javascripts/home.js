@@ -36,4 +36,15 @@ $(document).ready(function() {
 		$('.exit_mem').fadeOut();
 	});
 
+	$('.memo_two .memo_box').on('click', function(e){
+			e.preventDefault();
+		$('.home_love').fadeIn();
+	});
+
+	$('.close').on('click', function() {
+		$('.home_love').fadeOut();
+		$('.exit_mem').fadeOut();
+	});
+
+
 });

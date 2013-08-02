@@ -1,6 +1,6 @@
 .donate
 	@include outer-container
-	height: 600px
+	min-height: 600px
 	.text
 		@include span-columns(9)
 		line-height: 27px
@@ -9,5 +9,8 @@
 	.paypal_box
 		@include span-columns(3)
 		height: 200px
-		background-color: white
 		width: 250px
+		margin-top: 125px
+		text-align: center
+	form input[type=image]
+		width: 175px
