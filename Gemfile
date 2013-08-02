@@ -4,10 +4,11 @@ gem 'pg'
 gem 'thin'
 gem 'figaro'
 gem 'haml'
+gem 'bourbon'
+
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
-  gem 'bourbon'
 	gem 'neat'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
