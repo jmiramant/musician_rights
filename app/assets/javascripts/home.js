@@ -46,5 +46,4 @@ $(document).ready(function() {
 		$('.exit_mem').fadeOut();
 	});
 
-
 });
