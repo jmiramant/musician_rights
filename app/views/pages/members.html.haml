@@ -29,54 +29,55 @@
 			= f.input :band
 			= f.input :opt_out, label: "Exclude your name from being posted on our website"
 			= f.action :submit, label: "Next"
-	.section_one.mem_list
-		.banner
-			Members
-		.box
-			.events
-				.text
-					-@users.each do |user|
-						.mem_event
-							.title
-								=user.id
-								\-
-								=user.first_name
-								=user.last_name
-							.band
-								- if user.band != ""
-									Band: 
-									=user.band
-	.use_logo
-		.top
-			%h3
-				Share with the World
-			.copy
+	.base	
+		.section_one.mem_list
+			.banner
+				Members
+			.box
+				.events
+					.text
+						-@users.each do |user|
+							.mem_event
+								.title
+									=user.id
+									\-
+									=user.first_name
+									=user.last_name
+								.band
+									- if user.band != ""
+										Band: 
+										=user.band
+		.use_logo
+			.top
+				%h3
+					Share with the World
+				.copy
+					%p 
+						Click to Download 
+						%br
+						the Musician Rights Logo 
+					%form{:action => "http://everfimkt.s3.amazonaws.com/CSS/Video/logo_three.png", :method => "get"}
+						%button{:type => "submit"} 
+							=image_tag 'logo_three.png'
+					%p 
+						to Include on 
+						%br
+						Your Personal Site
+		.perk_box
+			%h2
+				Sweeten The Deal
+			.perk
+				%p contribute
+				%i.icon-usd
+				<span id="num">10</span>
 				%p 
-					Click to Download 
-					%br
-					the Musician Rights Logo 
-				%form{:action => "http://everfimkt.s3.amazonaws.com/CSS/Video/logo_three.png", :method => "get"}
-					%button{:type => "submit"} 
-						=image_tag 'logo_three.png'
+					You recognize the need for an aggressive Musician Rights Movement. Your donation to MusicianRights.org, will get you an awesome Logo Sticker!
+			.perk
+				%p contribute
+				%i.icon-usd
+				<span id="num">50</span>
 				%p 
-					to Include on 
-					%br
-					Your Personal Site
-	.perk_box
-		%h2
-			Sweeten The Deal
-		.perk
-			%p contribute
-			%i.icon-usd
-			<span id="num">10</span>
-			%p 
-				You recognize the need for an aggressive Musician Rights Movement. Your donation to MusicianRights.org, will get you an awesome Logo Sticker!
-		.perk
-			%p contribute
-			%i.icon-usd
-			<span id="num">50</span>
-			%p 
-				You recognize the need for an aggressive Musician Rights Movement. Your donation to MusicianRights.org, will get you an awesome Logo T-shirt!
+					You recognize the need for an aggressive Musician Rights Movement. Your donation to MusicianRights.org, will get you an awesome Logo T-shirt!
 
 				
 

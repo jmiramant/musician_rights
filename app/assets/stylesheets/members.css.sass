@@ -43,48 +43,50 @@
 .third
   @include outer-container
   width: 1088px
-  .mem_list
-    margin-top: 62px
-    .box
+  .base
+    display: inline-block
+    .mem_list
+      margin-top: 62px
+      .box
+        height: 382px
+        .text
+          height: 345px
+    .use_logo
+      width: 32%
       height: 382px
-      .text
-        height: 345px
-  .use_logo
-    width: 32%
-    height: 382px
-    float: left
-    text-align: center
-    background-color: #ffffff
-    margin: 61px 0 0 0
-    .top
-      width: 100%
-      background: $grey
-      height: 47px
-      h3
-        margin: 0
-        color: $yellow
-        padding-top: 12px
-        font-size: 24px
-        text-align: center
-        font-weight: 300
-      .copy
-        p
-          font-size: 26px
-          margin: 11px
-        p:nth-child(1)
-          margin-top: 56px
-          line-height: 32px
-        button
-          border-radius: 3px
-          background-color: #ffffff
-          @include transition (all 0.2s ease-in-out)
-          &:hover
-            background-color: $grey
-          img
-            background-color: $yellow
-            width: 100px
-            height: 100px
-            margin-top: 2px
+      float: left
+      text-align: center
+      background-color: #ffffff
+      margin: 61px 0 0 0
+      .top
+        width: 100%
+        background: $grey
+        height: 47px
+        h3
+          margin: 0
+          color: $yellow
+          padding-top: 12px
+          font-size: 24px
+          text-align: center
+          font-weight: 300
+        .copy
+          p
+            font-size: 26px
+            margin: 11px
+          p:nth-child(1)
+            margin-top: 56px
+            line-height: 32px
+          button
+            border-radius: 3px
+            background-color: #ffffff
+            @include transition (all 0.2s ease-in-out)
+            &:hover
+              background-color: $grey
+            img
+              background-color: $yellow
+              width: 100px
+              height: 100px
+              margin-top: 2px
   .signup
     @include span-columns(4)
     border: 3px solid $grey
