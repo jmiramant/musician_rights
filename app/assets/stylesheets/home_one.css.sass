@@ -16,17 +16,20 @@
 		min-height: 420px
 		margin-bottom: 42px
 		.head
-			background-color: $green
 			margin-right: 0 !important
 			@include span-columns(7)
 			h1
-				color: $yellow
+				color: #ffd464
 				padding-left: 30px
+				background-color: #353f48
+				margin: 0
+				height: 43px
+				padding-top: 11px
 			.mission
 				padding: 17px
 				font-size: 21px
 				line-height: 33px
-				background-color: whitesmoke
+				background-color: rgba(245,245,245, 0.8)
 				width: 100%
 				height: 357px
 				.top
@@ -78,14 +81,17 @@
 						color: $yellow
 		.g_head
 			@include span-columns(5)
-			background-color: $green
 			margin-left: 25px
 			h1
-				color: $yellow
+				color: #ffd464
 				padding-left: 30px
+				background-color: #353f48
+				margin: 0
+				height: 43px
+				padding-top: 11px
 			.goals
 				height: 357px
-				background-color: whitesmoke
+				background-color: rgba(245,245,245, 0.8)
 				p
 					padding: 0 40px
 					background: white
@@ -95,6 +101,7 @@
 					padding-top: 80px
 					border-top: 2px solid $grey
 				ul
+					margin-top: 0
 					li
 						@include transition (all 0.2s ease-in-out)
 						display: inline-block
