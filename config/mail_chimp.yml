@@ -3,13 +3,20 @@ common: &default_settings
   subscriber_list: "61d4987e01"
 
 development:
-  <<: *default_settings
+  api_key: "91f455bf0d3448173043fd334cbec463-us7"
+  subscriber_list: "61d4987e01"
+
 test:
-  <<: *default_settings
+  api_key: "91f455bf0d3448173043fd334cbec463-us7"
+  subscriber_list: "61d4987e01"
+
 demo:
-  <<: *default_settings
+  api_key: "91f455bf0d3448173043fd334cbec463-us7"
+  subscriber_list: "61d4987e01"
+
 staging:
-  <<: *default_settings
+  api_key: "91f455bf0d3448173043fd334cbec463-us7"
+  subscriber_list: "61d4987e01"
 
 production:
   api_key: "91f455bf0d3448173043fd334cbec463-us7"
