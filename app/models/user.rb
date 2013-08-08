@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :first_name, :last_name, :email, :zipcode, :band, :opt_out
+  attr_accessible :first_name, :last_name, :count, :email, :zipcode, :band, :opt_out
 
   validates_presence_of :first_name, :last_name, :email, :zipcode
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create

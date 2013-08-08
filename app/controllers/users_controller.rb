@@ -5,8 +5,14 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		p params[:user]
-		@user = User.create(params[:user])
+		form = params[:user]
+		@user = User.create(first_name: form[:first_name],
+												last_name: form[:last_name],
+												email: form[:email],
+												opt_out: form[:opt_out],
+												zipcode: form[:zipcode],
+												band: form[:band],
+												count: User.all.length+1 )
 	  respond_to do |format|
 	    if @user.save
 	      format.json { render json: @user }

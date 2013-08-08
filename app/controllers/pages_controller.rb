@@ -1,7 +1,8 @@
 class PagesController < ApplicationController
 
 	def home
-		@events = Event.all
+		events_list = Event.all.sort_by &:date
+		@events = events_list.reverse
 		@user = User.new
 	end
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130730151902) do
+ActiveRecord::Schema.define(:version => 20130808072712) do
 
   create_table "events", :force => true do |t|
     t.string   "title"
@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(:version => 20130730151902) do
     t.integer  "zipcode"
     t.string   "band"
     t.boolean  "opt_out",    :default => false
+    t.integer  "count"
   end
 
 end
