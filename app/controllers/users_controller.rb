@@ -29,6 +29,6 @@ class UsersController < ApplicationController
         csv << [user.first_name, user.last_name, user.zipcode, user.band, user.email, user.opt_out]
       end
 		end
-		send_data(user_csv, :type => 'test/csv', :filename => 'user_record.csv') 
+		send_data(user_csv, :type => 'test/csv', :filename => 'user_list.csv') 
 	end
 end
