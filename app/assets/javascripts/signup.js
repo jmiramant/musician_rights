@@ -29,7 +29,7 @@ function successPath(data) {
 	} else {
 		var band = "";
 	}
-	$('.text .mem_event:first-child').before("<div style='display:none' class='mem_event'> <div class='title'>" + data.id + " - " + data.first_name + " " + data.last_name + "</div> <div class='band'>" + band + data.band + "</div> </div>");
+	$('.text .mem_event:first-child').before("<div style='display:none' class='mem_event'> <div class='title'>" + data.count + " - " + data.first_name + " " + data.last_name + "</div> <div class='band'>" + band + data.band + "</div> </div>");
 }
 
 function incrementCount() {
