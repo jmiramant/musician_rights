@@ -23,6 +23,8 @@ $(document).ready(function() {
 		});
 	});
 
+	$('.love_button').addClass('button');
+
 	$('.join').on('click', function() {
 		window.location.href = "/members?flash=Sign Up Below to Join the Movement";
 	});	
@@ -31,7 +33,11 @@ $(document).ready(function() {
 		$('.button').on('click', function() {
 			window.location.href = "/members?flash=Sign Up Below to Join the Movement";
 		});
+		$('.button').html('Become a Member')
 	}
+	if (window.location.pathname == '/members'){
+		$('.love_button').hide();
+		}
 
 	setTimeout(function(){
 		$('.flash').fadeIn(300);

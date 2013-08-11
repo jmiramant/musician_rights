@@ -45,6 +45,7 @@
   width: 1088px
   .base
     display: inline-block
+    margin-top: 35px
     .mem_list
       margin-top: 62px
       display: block
@@ -191,6 +192,7 @@
 
     .button
       background-color: $yellow
+      text-align: center
 
   #new_user input[type="checkbox"]
     background-color: black
@@ -273,10 +275,11 @@
       background-color: $yellow
       width: 30%
       height: 45px
-      font-size: 18px
+      font-size: 13px
       margin: 0px 25px 25px 25px
       float: right
-      padding: 11px 0 0 48px
+      text-align: center
+      padding-top: 11px
       border-radius: 3px
       border: 1px solid #374953
       @include transition (all 0.2s ease-in-out)
@@ -303,6 +306,7 @@
           padding-top: 21px
           text-align: center
           font-size: 26px
+          font-weight: 300
         p
           color: $grey
           padding: 15px 40px 0 48px
@@ -336,13 +340,31 @@
         background-color: $yellow
         width: 30%
         height: 45px
-        font-size: 18px
+        font-size: 13px
         margin: 0px 25px 25px 25px
         float: right
-        padding: 11px 0 0 48px
-        border-radius: 3px
+        padding-top: 11px
+        text-align: center
         border: 1px solid #374953
         @include transition (all 0.2s ease-in-out)
         &:hover
           background-color: $grey
           color: $yellow
+.love_button
+  position: relative
+  cursor: pointer
+  background-color: $yellow
+  width: 30%
+  height: 45px
+  font-size: 18px
+  margin: 0px 25px 25px 25px
+  float: right
+  border-radius: 3px
+  text-align: center
+  padding-top: 10px
+  border-radius: 3px
+  border: 1px solid #374953
+  @include transition (all 0.2s ease-in-out)
+  &:hover
+    background-color: $grey
+    color: $yellow
