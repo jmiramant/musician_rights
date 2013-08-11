@@ -15,6 +15,7 @@ class PagesController < ApplicationController
 	def members
 		@users = User.where(opt_out: 'false').order('created_at DESC')
 		@new_user = User.new
+		@flash = params[:flash].to_s
 		@count = User.all.length
 	end
 

@@ -24,8 +24,18 @@ $(document).ready(function() {
 	});
 
 	$('.join').on('click', function() {
-		window.location.href = "/members";
-	});
+		window.location.href = "/members?flash=Sign Up Below to Join the Movement";
+	});	
+
+	if (window.location.pathname == '/'){
+		$('.button').on('click', function() {
+			window.location.href = "/members?flash=Sign Up Below to Join the Movement";
+		});
+	}
+
+	setTimeout(function(){
+		$('.flash').fadeIn(300);
+	}, 1000);
 
 	$('.memo_one .memo_box').on('click', function(e){
 			e.preventDefault();

@@ -19,6 +19,9 @@
 				- if admin?
 					= link_to 'Admin Panel', users_panel_path
 					= link_to 'Logout', logout_path
+		- if @flash
+			.flash
+				= @flash
 		.flex2
 			.text
 				Join The 

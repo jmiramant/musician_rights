@@ -47,46 +47,65 @@
     display: inline-block
     .mem_list
       margin-top: 62px
+      display: block
+      float: left
+      margin-right: 2.35765%
+      width: 31.76157%
+      margin-right: 0
+      width: 320px
       .box
-        height: 382px
+        height: 422px
+        width: 300px
+        .events
+          width: 290px
         .text
-          height: 345px
+          height: 385px
     .use_logo
-      width: 32%
-      height: 382px
+      width: 41%
+      height: 422px
       float: left
       text-align: center
       background-color: #ffffff
       margin: 61px 0 0 0
+      overflow: scroll
       .top
-        width: 100%
-        background: $grey
-        height: 47px
-        h3
+        h1
           margin: 0
+          background-color: $grey
+          padding: 12px 0
+          font-size: 23px
           color: $yellow
-          padding-top: 12px
-          font-size: 24px
-          text-align: center
+          position: absolute
+          width: 446px
           font-weight: 300
-        .copy
-          p
-            font-size: 26px
-            margin: 11px
-          p:nth-child(1)
-            margin-top: 56px
-            line-height: 32px
-          button
-            border-radius: 3px
-            background-color: #ffffff
-            @include transition (all 0.2s ease-in-out)
-            &:hover
-              background-color: $grey
-            img
-              background-color: $yellow
-              width: 100px
-              height: 100px
-              margin-top: 2px
+      .body
+        margin: 44px 12px 12px 12px
+        padding: 6px 20px 20px 20px
+        border: 1px solid #e8e8e8
+        text-align: left
+        #def
+          text-transform: uppercase
+          border-bottom: 1px solid $yellow
+        h3
+          color: #353f48
+          text-align: center
+          background-color: #ffd65a
+          padding: 3px 0 0 11px
+          margin: -5px 0 0 -20px
+          height: 30px
+          width: 420px
+        ul
+          line-height: 24px
+          list-style: none
+          padding: 0 18px
+          li
+            padding: 4px 0
+        p
+          float: right
+          padding-right: 19px
+          font-size: 19px
+    .perk_box
+      width: 300px
   .signup
     @include span-columns(4)
     border: 3px solid $grey

@@ -2,38 +2,80 @@
 	@include outer-container
 	min-height: 240px
 	margin-top: 80px
-	.memo_one
-		@include span-columns(6)
-		a
-			text-decoration: none
-			color: $grey
-	.memo_two
-		@include span-columns(6)
-		a
-			text-decoration: none
-			color: $grey
-	.memo
-		margin: 10px
-	.banner
-		background-color: $yellow
-		width: 200px
-		height: 35px
-		text-align: center
-		font-size: 16px
-		color: $green
-		padding-top: 6px
-		margin: -14px 0 -8px 63px
-		float: left
-	.memo_box
-		width: 360px
-		background-color: #ffffff
-		height: 200px
-		margin: 0 auto
-		@include transition (all 0.2s ease-in-out)
-		text-align: center
-		&:hover	
-			color: $yellow
-		p
-			font-size: 27px
-		i
-			font-size: 80px
+	.mid_container
+		@include span-columns(4)
+		margin-right: 2.35765%
+		width: 345px
+		.memo_one
+			background-color: #ffffff
+			a
+				text-decoration: none
+				color: $grey
+		.memo_two
+			background-color: #ffffff
+			a
+				text-decoration: none
+				color: $grey
+		.memo
+			margin: 10px
+		.banner
+			background-color: $yellow
+			width: 200px
+			height: 35px
+			text-align: center
+			font-size: 16px
+			color: $green
+			padding-top: 6px
+			margin: -14px 0 -8px -10px
+			float: left
+		.memo_box
+			width: 350px
+			background-color: #ffffff
+			height: 200px
+			margin: 0 auto
+			@include transition (all 0.2s ease-in-out)
+			text-align: center
+			&:hover	
+				color: $yellow
+			p
+				font-size: 27px
+			i
+				font-size: 80px
+		.mid_box
+			background-color: #ffffff
+			height: 214px
+			width: 348px
+			.top
+				background: $grey
+				height: 47px
+				margin-top: -4px
+				h3
+					margin: 0
+					color: $yellow
+					padding-top: 12px
+					font-size: 24px
+					text-align: center
+					font-weight: 300
+				.copy
+					width: 224px
+					float: left
+					text-align: center
+					margin-top: 45px
+					p
+						font-size: 16px
+						margin: 11px
+				form
+					float: right
+					margin: 42px 27px 0 0
+					button
+						border-radius: 3px
+						background-color: #ffffff
+						float: right
+						@include transition (all 0.2s ease-in-out)
+						&:hover
+							background-color: $grey
+						img
+							background-color: $yellow
+							width: 76px
+							height: 76px
+							margin-top: 2px

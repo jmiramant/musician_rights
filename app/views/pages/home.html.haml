@@ -24,7 +24,6 @@
 								Rights - Inherent entitlement
 					%ul
 						.sub_header
-							Musician Rights
 						.nest_box
 							%li
 								The Right to own and maintain control of one’s Music.
@@ -34,7 +33,7 @@
 								The Right to own and control Master recording.
 							%li
 								The Right to own and control Publishing.
-					%a{'href' => '/members'}
+					%a{'href' => '/members?flash=Sign Up Below to Join the Movement'}
 						.member
 							Become A Member
 			.g_head
@@ -55,26 +54,39 @@
 					#tab3
 						%p Together we can be apart of any action or debate which would effect musicians.
 	.second
-		.memo_one
-			.memo
-				.banner
-					Musician Rights Memo
-			%a{:href => "/"}
-				.memo_box
-					%br
-					%br
-					%i.icon-headphones
-					%p Learn your Rights
-		.memo_two
-			.memo
-				.banner
-					Statement of Support
-			%a{:href => "/"}
-				.memo_box
-					%br
-					%br
-					%i.icon-file-text-alt
-					%p Support the Movement
+		.mid_container
+			.memo_one
+				.memo
+					.banner
+						Musician Rights Memo
+				%a{:href => "/"}
+					.memo_box
+						%br
+						%br
+						%i.icon-headphones
+						%p Learn your Rights
+		.mid_container
+			.mid_box
+				.top
+					%h3
+						Share with the World
+					.copy
+						%p 
+							Click to Download the Musician Rights Logo to Include on Your Personal Site
+					%form{:action => "http://everfimkt.s3.amazonaws.com/CSS/Video/logo_three.png", :method => "get"}
+						%button{:type => "submit"} 
+							=image_tag 'logo_three.png'
+		.mid_container
+			.memo_two
+				.memo
+					.banner
+						Statement of Support
+				%a{:href => "/"}
+					.memo_box
+						%br
+						%br
+						%i.icon-file-text-alt
+						%p Support the Movement
 	.third
 		.section_one
 			.banner
