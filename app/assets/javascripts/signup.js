@@ -24,12 +24,10 @@ $(document).ready(function() {
 });
 
 function successPath(data) {
+	var band = "";
 	if (data.band !== "") {
-		var band = "Band: ";
-	} else {
-		var band = "";
+		band = "Band: ";
 	}
-	$('.text .mem_event:first-child').before("<div style='display:none' class='mem_event'> <div class='title'>" + data.count + " - " + data.first_name + " " + data.last_name + "</div> <div class='band'>" + band + data.band + "</div> </div>");
 }
 
 function incrementCount() {
