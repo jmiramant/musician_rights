@@ -1,6 +1,6 @@
 .top_copy
   background-color: $grey
-  height: 300px
+  height: 324px
   .spacing
     width: 1088px
     height: 300px
@@ -9,15 +9,32 @@
       width: 717px
       float: left
       color: whitesmoke
-      margin-top: 54px
+      margin-top: 20px
       margin-left: -182px
       height: 200px
       h1
         color: $yellow
-        margin-bottom: 34px
+        margin-bottom: 9px
       p
         font-size: 18px
         line-height: 26px
+      h3
+        margin-bottom: 7px
+        text-align: center
+        color: $yellow
+        padding-right: 33px
+      .meme_content
+        width: 693px
+        display: inline-block
+        .mem_info
+          width: 50%
+          float: left
+          text-align: center
+          line-height: 24px
+          i
+            font-size: 30px
+            color: $yellow
+
     .counter
       width: 349px
       margin-left: 731px
@@ -45,22 +62,66 @@
   width: 1088px
   .base
     display: inline-block
-    margin-top: 35px
+    margin-top: -20px
+    width: 100%
     .mem_list
       margin-top: 62px
-      display: block
       float: left
       margin-right: 2.35765%
       width: 31.76157%
       margin-right: 0
       width: 320px
       .box
-        height: 422px
-        width: 300px
+        height: 332px
+        width: 717px
+        overflow-x: scroll
+        .top
+          background-color: #ffd65a
+          height: 40px
+          margin: -1px 0 0 -1px
+          position: absolute
+          width: 717px
+          text-align: center
+          font-weight: 300
+          padding-top: 10px
+          font-size: 26px
+        .copy
+          color: #000
+          margin-top: 39px
+          text-align: center
+          position: absolute
+          width: 717px
+          padding: 22px
         .events
-          width: 290px
-        .text
-          height: 385px
+          width: 10000%
+          margin-top: 150px
+          padding-left: 1px
+          height: 142px
+          .text
+            height: 168px
+          .mem_event
+            display: inline-block
+            height: 167px
+            width: 160px
+            padding: 0
+            float: left
+            border-left: 1px solid #ffd65a
+            text-align: center
+            .count
+              background: $grey
+              color: $yellow
+              margin: -10px
+              height: 48px
+              font-size: 13px
+              line-height: 15px
+              padding: 13px 0
+            .first
+              margin-top: 30px
+            .last
+              font-size: 27px
+              color: $yellow
+            .band
+              margin: 20px 0 0 0
     .use_logo
       width: 41%
       height: 422px
@@ -106,7 +167,9 @@
           padding-right: 19px
           font-size: 19px
     .perk_box
-      width: 300px
+      width: 350px
+      margin-top: -104px
+      height: 500px
   .signup
     @include span-columns(4)
     border: 3px solid $grey
@@ -168,6 +231,7 @@
       font-weight: 300
     .perk
       padding: 10px 33px
+      margin: 24px 16px 16px 16px
       border: 4px solid #E8E8E8
       p
         margin: 0 0 5px 0
@@ -289,11 +353,66 @@
   .lovers
     width: 66%
     float: left
+    display: inline-block
+    .memo_bx
+      float: right
+      height: 78%
+      overflow-x: scroll
+      border-radius: 3px
+      top: 7%
+      width: 48%
+      left: 29%
+      background-color: #ffffff
+      .top
+        height: 582px
+      h1
+        background-color: $grey
+        color: $yellow
+        height: 68px
+        margin-top: -28px
+        border-radius: 3px 3px 0 0
+        padding-top: 37px
+        text-align: center
+        font-size: 21px
+        font-weight: 300
+      h3
+        color: $grey
+        text-align: center
+        background-color: $yellow
+        padding: 3px 0 0 11px
+        margin: 0 0 0 30px
+        height: 30px
+        width: 300px
+      .body
+        &:nth-child(3)
+          margin-top: 25px
+        #def
+          text-transform: uppercase
+          border-bottom: 1px solid $yellow
+        h3
+          color: $grey
+          text-align: center
+          background-color: $yellow
+          padding: 3px 0 0 11px
+          margin: 0 0 0 30px
+          height: 30px
+          width: 300px
+        ul
+          line-height: 24px
+          list-style: none
+          padding: 0 15px 0 27px
+        p
+          float: right
+          padding-right: 19px
+          font-size: 19px
     .lovers_bx
       height: 78%
       overflow-x: scroll
       border-radius: 3px
       top: 7%
+      width: 48%
+      margin-left: 14px
+      float: right
       left: 29%
       background-color: #ffffff
       .top
@@ -303,18 +422,17 @@
         margin-top: -28px
         border-radius: 3px 3px 0 0
         h1
-          padding-top: 21px
+          padding-top: 24px
           text-align: center
-          font-size: 26px
+          font-size: 21px
           font-weight: 300
         p
           color: $grey
-          padding: 15px 40px 0 48px
+          padding: 0 20px
       .body
-        margin: 95px 0 0 0
-        width: 50%
-        display: inline-block
-        float: left
+        margin: 118px 0 0 0
+        &:nth-child(3)
+          margin-top: 25px
         #def
           text-transform: uppercase
           border-bottom: 1px solid $yellow

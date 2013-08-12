@@ -6,6 +6,17 @@
 				We stand for our members
 			%p
 				It is common knowledge musicians make substantially less money as compared to the businesses that profit from their music. When musicians first start out, they have very little bargaining power. They are the targets of bad contracts, which sometimes follow them their whole careers. We want Musicians to receive their fair share of the profits from their music.
+			%h3
+				Memebership
+			.meme_content	
+				.mem_info
+					Musicians become members by accepting the Musician Rights memo.
+					%br
+					%i.icon-circle-arrow-down
+				.mem_info
+					Music lover's become members by accepting the Statement of support.
+					%br
+					%i.icon-circle-arrow-down
 		.counter
 			.count_bx
 				.copy
@@ -15,6 +26,46 @@
 .third
 	.lovers
 		= render 'pages/lovers'
+		.memo_bx
+			.top
+				%h1
+					Musician Rights Memo
+				.body
+					%h3
+						Definitions:
+					%ul
+						%li
+							<span id="def">Music</span> - A recognizable sound
+						%li
+							<span id="def">Musician</span> - Anyone who creates a recognizable sound
+						%li
+							<span id="def">Rights</span> - Inherent entitlement 
+						%li
+							<span id="def">Musician Rights</span> –  The Right to own and maintain control of one’s Music.  
+							%ul
+								%li
+									The Right to own and control Copyright. 
+								%li
+									The Right to own and control Master recording.
+								%li
+									The Right to own and control Publishing.
+
+					%h3
+						The Memo
+					%ul
+						%li
+							I agree to the following:
+						%ul
+							%li
+								I will not contract away my Musician Rights at a percentage greater than what I receive. 
+							%li
+								I will never give more than half of my rights away. 
+							%li
+								I will only engage opportunities for my music that respects my rights.
+							%li
+								I WILL NEVER RELINQUISH MY MUSICIAN RIGHTS!
+							%li
+								I am signing this memorandum because I believe that if every musician unites to sign and follow the Musician Rights Memo, we will create a new standard in the music industry where MUSICIAN'S COME FIRST!
 	.signup
 		.join
 			Join The Movement
@@ -31,62 +82,27 @@
 			= f.action :submit, label: "Next"
 	.base	
 		.section_one.mem_list
-			.banner
-				Members
 			.box
+				.top
+					Members
+				.copy
+					We are building a movement of engaged artists standing up for the their rights as muscians. Here are some of our members. 
 				.events
 					.text
 						-@users.each do |user|
 							.mem_event
-								.title
-									=user.count
-									\-
+								.count
+									Member since:
+									%br
+									=user.created_at.strftime("%b, %Y")
+								.first
 									=user.first_name
+								.last
 									=user.last_name
 								.band
 									- if user.band != ""
 										Band: 
 										=user.band
-		.use_logo
-			.top
-				%h1
-					Musician Rights Memo
-			.body
-				%h3
-					Definitions:
-				%ul
-					%li
-						<span id="def">Music</span> - A recognizable sound
-					%li
-						<span id="def">Musician</span> - Anyone who creates a recognizable sound
-					%li
-						<span id="def">Rights</span> - Inherent entitlement 
-					%li
-						<span id="def">Musician Rights</span> –  The Right to own and maintain control of one’s Music.  
-						%ul
-							%li
-								The Right to own and control Copyright. 
-							%li
-								The Right to own and control Master recording.
-							%li
-								The Right to own and control Publishing.
-
-				%h3
-					The Memo
-				%ul
-					%li
-						I agree to the following:
-					%ul
-						%li
-							I will not contract away my Musician Rights at a percentage greater than what I receive. 
-						%li
-							I will never give more than half of my rights away. 
-						%li
-							I will only engage opportunities for my music that respects my rights.
-						%li
-							I WILL NEVER RELINQUISH MY MUSICIAN RIGHTS!
-						%li
-							I am signing this memorandum because I believe that if every musician unites to sign and follow the Musician Rights Memo, we will create a new standard in the music industry where MUSICIAN'S COME FIRST!
 		.perk_box
 			%h2
 				Sweeten The Deal
