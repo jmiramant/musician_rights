@@ -13,6 +13,7 @@ class UsersController < ApplicationController
 												zipcode: form[:zipcode],
 												band: form[:band],
 												count: User.all.length+1 )
+		@user.create_user_record_in_mailchimp
 	  respond_to do |format|
 	    if @user.save
 	      format.json { render json: @user }
