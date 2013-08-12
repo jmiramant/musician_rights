@@ -142,6 +142,8 @@ GEM
       rspec-mocks (~> 2.14.0)
     rubyzip (0.9.9)
     sass (3.2.10)
+    sass-mediaqueries-rails (1.2.3.1)
+      sass (>= 3.2.0)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
@@ -204,6 +206,7 @@ DEPENDENCIES
   pg
   rails (= 3.2.13)
   rspec-rails
+  sass-mediaqueries-rails
   sass-rails (~> 3.2.3)
   selenium-webdriver
   sextant
