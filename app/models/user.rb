@@ -6,7 +6,11 @@ class User < ActiveRecord::Base
   validates_format_of :zipcode, :with => /^\d{5}(-\d{4})?$/, :message => "should be in the form 12345"
 
 	def create_user_record_in_mailchimp
-		MailChimp.add_user(self)
+		begin
+			MailChimp.add_user(self)
+		rescue => e
+			e.message
+		end
 	end
 
 end
