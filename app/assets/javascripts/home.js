@@ -1,5 +1,5 @@
-$(document).ready(function() {
-	$('ul.tabs').each(function() {
+var selectTab = function(){
+		$('ul.tabs').each(function() {
 		var $active, $content, $links = $(this).find('a');
 		$active = $($links.filter('[href="' + location.hash + '"]')[0] || $links[0]);
 		$active.addClass('active');
@@ -22,18 +22,23 @@ $(document).ready(function() {
 			e.preventDefault();
 		});
 	});
+};
+
+
+$(document).ready(function() {
+	selectTab();
 
 	$('.love_button').addClass('button');
 
 	$('.join').on('click', function() {
 		window.location.href = "/members?flash=Sign Up Below to Join the Movement";
-	});	
+	});
 
 	if (window.location.pathname == '/'){
 		$('.button').on('click', function() {
 			window.location.href = "/members?flash=Sign Up Below to Join the Movement";
 		});
-		$('.button').html('Become a Member')
+		$('.button').html('Become a Member');
 	}
 	if (window.location.pathname == '/members'){
 		$('.love_button').hide();
