@@ -114,13 +114,20 @@
 				<span id="num">10</span>
 				%p 
 					You recognize the need for an aggressive Musician Rights Movement. Your donation to MusicianRights.org, will get you an awesome Logo Sticker!
+				%form{:action => "https://www.paypal.com/cgi-bin/webscr", :method => "post", :target => "_top"}
+					%input{:name => "cmd", :type => "hidden", :value => "_s-xclick"}/
+					%input{:name => "hosted_button_id", :type => "hidden", :value => "XMJPLWPRB3JEC"}/
+					%input{:alt => "PayPal - The safer, easier way to pay online!", :border => "0", :name => "submit", :src => "https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif", :type => "image"}/
 			.perk
 				%p contribute
 				%i.icon-usd
 				<span id="num">50</span>
 				%p 
 					You recognize the need for an aggressive Musician Rights Movement. Your donation to MusicianRights.org, will get you an awesome Logo T-shirt!
-
+				%form{:action => "https://www.paypal.com/cgi-bin/webscr", :method => "post", :target => "_top"}
+					%input{:name => "cmd", :type => "hidden", :value => "_s-xclick"}/
+					%input{:name => "hosted_button_id", :type => "hidden", :value => "XMJPLWPRB3JEC"}/
+					%input{:alt => "PayPal - The safer, easier way to pay online!", :border => "0", :name => "submit", :src => "https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif", :type => "image"}/
 				
 
 	=render 'pages/memo'
