@@ -14,7 +14,6 @@ class UsersController < ApplicationController
 												band: form[:band],
 												count: User.all.length+1 )
 	  respond_to do |format|
-		
 	    if @user.save 
 	    	if @user.create_user_record_in_mailchimp
 	      	format.json { render json: @user }
