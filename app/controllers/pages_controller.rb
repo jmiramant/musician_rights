@@ -17,6 +17,7 @@ class PagesController < ApplicationController
 		@new_user = User.new
 		@flash = params[:flash].to_s
 		@count = User.all.length
+		@type = params[:user_type].to_s
 	end
 
 end

@@ -6,7 +6,6 @@ class UsersController < ApplicationController
 
 	def create
 		form = params[:user]
-		p params[:zipcode]
 		@user = User.create(first_name: form[:first_name],
 												last_name: form[:last_name],
 												email: form[:email],

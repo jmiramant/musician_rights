@@ -296,6 +296,65 @@
       margin-left: 63px
   .messages, .data
     display: none
+  .lovers_popup
+    .lovers_bx
+      overflow-x: scroll
+      border-radius: 3px
+      position: fixed
+      top: 7%
+      width: 575px
+      background-color: whitesmoke
+      border: 7px solid $yellow
+      height: 78%
+      left: 29%
+      background-color: #ffffff
+      display: none 
+      .top
+        background-color: $grey
+        color: $yellow
+        height: 66px
+        margin-top: -22px
+        border-radius: 3px 3px 0 0
+        h1
+          padding-top: 21px
+          text-align: center
+        p
+          color: $grey
+          padding: 16px
+      .body:nth-child(2)
+        margin-top: 90px
+      .body
+        padding: 0px 28px 0px 0
+        margin: 5px 0 0 28px
+        #def
+          text-transform: uppercase
+          border-bottom: 1px solid $yellow
+        h3
+          color: $yellow
+          background-color: $grey
+          border-bottom: 4px solid
+          padding: 3px 0 0 11px
+          height: 30px
+          border-radius: 0 3px 3px 0
+        ul
+          line-height: 24px
+          list-style: none
+    .close
+      position: fixed
+      top: 7%
+      background-color: whitesmoke
+      font-size: 50px
+      border-radius: 32px
+      width: 56px
+      cursor: pointer
+      height: 56px
+      padding-left: 6px
+      border: 2px solid $grey
+      margin: -24px 0 0 -31px
+      @include transition (all 0.2s ease-in-out)
+      &:hover
+        background-color: $grey
+        color: $yellow
   .memo
     width: 575px
     border: 7px solid $yellow
@@ -353,6 +412,8 @@
     width: 66%
     float: left
     display: inline-block
+    .button
+      display: none
     .memo_bx
       float: right
       height: 78%
@@ -489,3 +550,5 @@
   &:hover
     background-color: $grey
     color: $yellow
+.user_type
+  display: none

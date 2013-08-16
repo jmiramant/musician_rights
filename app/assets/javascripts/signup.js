@@ -8,11 +8,23 @@ $(document).ready(function() {
 		}, 1000);
 	});
 
+	if (window.location.pathname == '/members'){
+		$('.third').on('click', '.love_button', function(){
+			$('.lovers_popup').fadeOut();
+		});
+	}
+
 	$('.signup form').on("ajax:success", function(e, data) {
-		if (data.opt_out === false) {
+		var type = $('.user_type').html();
+		if (data.opt_out == false) {
 			successPath(data);
 		}
-		$('.memo').fadeIn();
+		if (type.search('musician') > 0 )
+		{
+			$('.memo').fadeIn();
+		} else if (type.search('lover') > 0) {
+			$('.lovers_popup .lovers_bx').fadeIn();
+		}
 		$(this).closest('form').find("input[type=text], textarea").val("");
 		$(this).closest('form').find("input[type=number], textarea").val("");
 		$(this).closest('form').find("input[type=email], textarea").val("");

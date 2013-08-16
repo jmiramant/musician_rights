@@ -35,14 +35,17 @@ $(document).ready(function() {
 	});
 
 	if (window.location.pathname == '/'){
-		$('.button').on('click', function() {
-			window.location.href = "/members?flash=Sign Up Below to Join the Movement";
+		$('.love_button').on('click', function() {
+			window.location.href = "/members?flash=Sign Up Below to Join the Movement&user_type=lover";
+		});
+		$('.mem_button').on('click', function() {
+			window.location.href = "/members?flash=Sign Up Below to Join the Movement&user_type=musician";
 		});
 		$('.button').html('Become a Member');
 	}
-	if (window.location.pathname == '/members'){
-		$('.love_button').hide();
-		}
+	// if (window.location.pathname == '/members'){
+	// 	$('.love_button').hide();
+	// 	}
 
 	setTimeout(function(){
 		$('.flash').fadeIn(300);
