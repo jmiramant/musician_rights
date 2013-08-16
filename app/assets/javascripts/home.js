@@ -1,5 +1,5 @@
-var selectTab = function(){
-		$('ul.tabs').each(function() {
+var selectTab = function() {
+	$('ul.tabs').each(function() {
 		var $active, $content, $links = $(this).find('a');
 		$active = $($links.filter('[href="' + location.hash + '"]')[0] || $links[0]);
 		$active.addClass('active');
@@ -24,8 +24,31 @@ var selectTab = function(){
 	});
 };
 
+function tabLoop() {
+	var intv = null
+	var i = 2;
+	intv = setInterval(function() {
+		$('.tabs a').removeClass('active');
+		$('.goals div').hide();
+		$('.tabs a:nth-child(' + i + ')').addClass('active');
+		$('#tab' + i).fadeIn(1000);
+		if (i >= 3) {
+			i = 1;
+		} else {
+			i++;
+		}
+	}, 4000);
+
+	$('.goals').hover(function() {
+			window.clearInterval(intv);
+		}, function() {
+			intv;
+		}
+		);
+}
 
 $(document).ready(function() {
+	tabLoop();
 	selectTab();
 
 	$('.love_button').addClass('button');
@@ -34,7 +57,7 @@ $(document).ready(function() {
 		window.location.href = "/members?flash=Sign Up Below to Join the Movement";
 	});
 
-	if (window.location.pathname == '/'){
+	if (window.location.pathname == '/') {
 		$('.love_button').on('click', function() {
 			window.location.href = "/members?flash=Sign Up Below to Join the Movement&user_type=lover";
 		});
@@ -43,16 +66,13 @@ $(document).ready(function() {
 		});
 		$('.button').html('Become a Member');
 	}
-	// if (window.location.pathname == '/members'){
-	// 	$('.love_button').hide();
-	// 	}
 
-	setTimeout(function(){
+	setTimeout(function() {
 		$('.flash').fadeIn(300);
 	}, 1000);
 
-	$('.memo_one .memo_box').on('click', function(e){
-			e.preventDefault();
+	$('.memo_one .memo_box').on('click', function(e) {
+		e.preventDefault();
 		$('.memo').fadeIn();
 	});
 
@@ -60,8 +80,8 @@ $(document).ready(function() {
 		$('.exit_mem').fadeOut();
 	});
 
-	$('.memo_two .memo_box').on('click', function(e){
-			e.preventDefault();
+	$('.memo_two .memo_box').on('click', function(e) {
+		e.preventDefault();
 		$('.home_love').fadeIn();
 	});
 
