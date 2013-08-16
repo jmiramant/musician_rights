@@ -24,7 +24,10 @@ $(document).ready(function() {
 			$('.memo').fadeIn();
 		} else if (type.search('lover') > 0) {
 			$('.lovers_popup .lovers_bx').fadeIn();
+		} else {
+			successMessage();
 		}
+
 		$(this).closest('form').find("input[type=text], textarea").val("");
 		$(this).closest('form').find("input[type=number], textarea").val("");
 		$(this).closest('form').find("input[type=email], textarea").val("");
