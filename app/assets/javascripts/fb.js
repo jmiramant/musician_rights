@@ -1,8 +1,9 @@
+<div id="fb-root"></div>
   window.fbAsyncInit = function() {
     // init the FB JS SDK
     FB.init({
-      appId      : 'YOUR_APP_ID',                        // App ID from the app dashboard
-      channelUrl : '//WWW.YOUR_DOMAIN.COM/channel.html', // Channel file for x-domain comms
+      appId      : '547993098582705',                        // App ID from the app dashboard
+      channelUrl : '//www.musicianrights.com/channel.html', // Channel file for x-domain comms
       status     : true,                                 // Check Facebook Login status
       xfbml      : true                                  // Look for social plugins on the page
     });
