@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessible :first_name, :last_name, :count, :email, :zipcode, :band, :opt_out
-
+  validates_uniqueness_of :email, message: "An account already exists with this email"
   validates_presence_of :first_name, :last_name, :email, :zipcode
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create
   # validates_format_of :zipcode, :with => /\w{5}/, :message => "should be in the form 12345"
